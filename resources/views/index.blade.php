@@ -67,8 +67,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <title>Promosikan Booth dengan StandEv</title>
+        <div class="col-md-6" id="title" style="padding-top: 10%;">
+            <div class="title">Promosikan Booth <br>  dengan <br> StandEv</div>
         </div>
     </div>
 </div>

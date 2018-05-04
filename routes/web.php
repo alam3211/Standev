@@ -19,6 +19,11 @@ Route::get('/aboutus', function () {
     return view('aboutus');
 })->name('about');
 
+Route::get('/event_list', function () {
+    return view('elist');
+})->name('elist');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

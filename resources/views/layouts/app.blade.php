@@ -19,7 +19,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.8;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="images/logo.png" height="35px"></a>
+            <a class="navbar-brand" href="{{ route('index') }}"><img src="images/logo.png" height="35px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,13 +30,10 @@
                         <a class="nav-link" href="{{ route('index') }}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('register') }}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Event List</a>
+                        <a class="nav-link" href="{{ route('elist') }}">Event List</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('about') }}">About Us</a>
