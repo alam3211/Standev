@@ -12,8 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name('index');
+
+Route::get('/aboutus', function () {
+    return view('aboutus');
+})->name('about');
 
 Auth::routes();
 

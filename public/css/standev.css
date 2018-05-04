@@ -1,0 +1,15 @@
+#menu {
+	color: white;
+	font-weight: 600;
+}
+
+#hover:hover {
+	font-weight: 500;
+	color: white;
+}
+
+#aboutus {
+	padding: 4% 7% 0% 7%;
+	color: white;
+	text-align: justify;
+}
