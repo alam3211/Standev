@@ -23,6 +23,13 @@ Route::get('/event_list', function () {
     return view('elist');
 })->name('elist');
 
+Route::get('/profile', function () {
+    return view('profile.profile');
+})->name('profile');
+
+Route::get('/post', function () {
+    return view('profile.post');
+})->name('post');
 
 Auth::routes();
 
