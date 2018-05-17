@@ -8,7 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Stand Event</title>
+    <link rel="icon" type="image/png" href="images/logonya.png">
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,6 +36,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('elist') }}">Event List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('book') }}">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('profile') }}">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('about') }}">About Us</a>

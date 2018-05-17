@@ -23,6 +23,10 @@ Route::get('/event_list', function () {
     return view('elist');
 })->name('elist');
 
+Route::get('/booking', function () {
+    return view('book');
+})->name('book');
+
 Route::get('/profile', function () {
     return view('profile.profile');
 })->name('profile');
