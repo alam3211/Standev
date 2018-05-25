@@ -51,9 +51,8 @@
 
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary btn-lg">
-                                    Login
-                                </button>
+                                <input type="submit" class="btn btn-primary btn-lg" value="Login" name="login-btn">
+                                </input>
 
                                 <a class="btn btn-link" id="hover" href="{{ route('password.request') }}">
                                     Forgot Your Password?
@@ -68,7 +67,7 @@
             </div>
         </div>
         <div class="col-md-6" id="title" style="padding-top: 10%;">
-            <div class="title">Promosikan Booth <br>  dengan <br> StandEv</div>
+            <div class="title">Promote Stand Event <br>  with <br> StandEv</div>
         </div>
     </div>
 </div>

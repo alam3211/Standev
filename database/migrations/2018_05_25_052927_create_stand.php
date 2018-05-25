@@ -22,6 +22,7 @@ class CreateStand extends Migration
             $table->integer('s_available');
             $table->string('s_type');
             $table->string('s_facility');
+            $table->binary('s_photo');
             $table->timestamps();
         });
     }
