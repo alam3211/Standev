@@ -22,15 +22,13 @@ background-image : none;
                 <!-- MODAL REGISTER -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                    <div class="row">
-                      <div class="modal-body col-sm-6">
-                        ...
+                    <div class="modal-content transparent">
+                      <div class="modal-body">
+                        <a href=""><h4><button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">I'm a Tenant</button></h4></a>
                       </div>
-                      <div class="modal-body col-sm-6">
-                        ...
-                      </div>
-                      </div>
+                    </div>
+                     <div class="modal-content transparent" style="margin: 5%;"">
+                        <a href=""><h4><button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">I have an Event</button></h4></a>
                     </div>
                   </div>
                 </div>

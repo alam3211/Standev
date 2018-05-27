@@ -65,3 +65,9 @@ li.dropdown:hover > .dropdown-menu {
     margin-top: 25px;
     margin-right: 10px;
 }
+
+.transparent{
+    margin: 5%;
+    background-color: transparent;
+    border: none;
+}
