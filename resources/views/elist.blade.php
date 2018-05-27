@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+	@if(isset($standpost))
 	<div class="container rounded" style="padding: 10px;margin-top: 6%; background-color: #262626;">
 	<div class="container rounded" style="background-color: #2c3e50;padding: 8px; color: white; background: transparent;">
 		<div class="row">
@@ -84,4 +85,9 @@
 		</div>
 	</div>
 	</div>
+	@else
+	<div class="d-flex  justify-content-center" style="margin-top: 15%;">
+	<h1><span class="badge badge-secondary badge-warning"><b>Tidak Ada Post</b></span></h1>
+	</div>
+	@endif
 @endsection
