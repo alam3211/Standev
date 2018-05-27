@@ -9,8 +9,8 @@
 						<div class="card card-profile text-center">
 					  		<img class="card-img-top" src="https://unsplash.it/340/160?image=354">
 					  		<div class="card-block">
-					    		<img class="card-img-profile" src="https://it.gravatar.com/userimage/3434071/205a00fc16ae537b26b56f40790910fe.jpg?size=120" style="margin-top: -95px; border-radius: 50%; border: 5px solid white;">
-					   			<h5 class="card-title"> Nicola Pressi</h5>
+					    		<img class="card-img-profile" src="{{ Storage::url($imgprofile) }}" style="margin-top: -95px; border-radius: 50%; border: 5px solid white;">
+					   			<h5 class="card-title">{{ Auth::User()->username }}</h5>
 					    		<div class="card-links">
 					      			<a class="fa fa-facebook-square" href="#"></a>
 					     		</div>
@@ -23,15 +23,16 @@
 			<div class="container rounded" style="background-color: white; padding: 10px;">
 				<div class="container rounded" style="background-color: grey;padding: 8px;"">
 					<h2>History Post</h2>
+					@foreach($profiles as $profile)
 					<div class="row">
 						<div class="col-md-2">
 							<img class="img-thumbnail float-left" src="images/thm.jpg">
 						</div>
-						<div class="col-md-6">
-							<h3>CAMP FAIR 2012</h3>
+						<div class="col-md-5">
+							<h3>{{ $profile->e_name }}</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-5">
 							<table>
 								<thead>
 									<tr>
@@ -48,6 +49,7 @@
 							</table>
 						</div>
 					</div>
+					@endforeach
 					<div class="row pull-right">
 						<button class="btn btn-primary btn-lg align-right pull-right" style="margin: 5px;">Post Event</button>
 					</div>

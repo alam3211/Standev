@@ -25,7 +25,7 @@ Route::post('/event_list/booking','BookingController@bookStore')->name('booking_
 Route::get('/booking', function () { return view('book');})->name('book');
 
 //Route::get('/profile', function () { return view('profile.profile');})->name('profile');
-Route::get('/profile','Auth\LoginController@getProfile')->name('profile');
+Route::get('/profile','HomeController@getProfile')->name('profile');
 
 Route::get('/post', function () { return view('profile.post');})->name('post');
 Route::post('/post','EventController@store')->name('post_store');
