@@ -24,11 +24,7 @@
 </head>
 <body style="@yield('styling') z-index: 10;">
     <div id="app">
-<<<<<<< HEAD
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.85;">
-=======
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.8;position: relative; z-index: 100;">
->>>>>>> 3e549975d00f64feb87f215ed2619d45961972a3
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('login') }}"><img src="{{ URL::asset('images/logo.png') }}" height="35px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
