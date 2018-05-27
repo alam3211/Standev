@@ -3,8 +3,8 @@
 @section('content')
 <!-- MultiStep Form -->
 <div class="row">
-    <div class="col-sm-6 col-md-offset-6 mx-auto">
-        <form id="msform" method="POST" action="{{route('regis_store_event')}}" enctype="multipart/form-data" style="margin-bottom: 40px;">
+    <div class="col-sm-6 col-md-offset-6 mx-auto" style="z-index: -3;">
+        <form id="msform" method="POST" action="{{route('regis_store_event')}}" enctype="multipart/form-data" style="margin-bottom: 40px; z-index: -1;">
             {{ csrf_field() }}
             <ul id="progressbar">
                 <li class="active">Pembuatan Akun</li>
@@ -42,8 +42,7 @@
                 <input type="text" name="e_loc" placeholder="Lokasi Event"/>
                 <input type="text" name="e_city" placeholder="Kota Event"/>
                 <input type="text" name="e_desc" placeholder="Deskripsi Event"/>
-                <input type="date" name="e_date1" placeholder="Jadwal Mulai Event"/>
-                <input type="date" name="e_date2" placeholder="Jadwal Selesai Event"/>
+                <input type="date" name="e_date1" placeholder="Jadwal Event"/>
                 <label>Berkas</label>
                 <input type="file" name="e_poster">
                 <span class="help-block text-danger">{{ $errors->first('file') }}</span>

@@ -61,7 +61,6 @@ class RegisterController extends Controller
             'e_city' => 'required|string|max:255',
             'e_desc' => 'required|string|max:255',
             'e_date1' => 'required',
-            'e_date2' => 'required',
             'e_telp' => 'required',
             'e_poster' => 'file|max:2000|mimes:jpeg,png',
             'e_email' => 'required|email',
@@ -84,8 +83,7 @@ class RegisterController extends Controller
             'e_city' => $request->e_city,
             'e_telp' => $request->e_telp,
             'e_email' => $request->e_email,
-            'e_startdate' => $request->e_date1,
-            'e_enddate' => $request->e_date2,
+            'e_date' => $request->e_date1,
             'e_description' => $request->e_desc,
             'e_poster' => $path,
         ]);

@@ -22,9 +22,9 @@
 
 
 </head>
-<body style="@yield('styling')">
+<body style="@yield('styling') z-index: 10;">
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.8;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.8;position: relative; z-index: 100;">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('login') }}"><img src="{{ URL::asset('images/logo.png') }}" height="35px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,20 +36,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('index') }}">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register_event') }}">Register Event</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register_tenant') }}">Register Tenant</a>
-                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown link
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Register
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          <a class="dropdown-item" href="{{ route('register_event') }}">Register Event</a>
+                          <a class="dropdown-item" href="{{ route('register_tenant') }}">Register Tenant</a>
                         </div>
                       </li>
                     <li class="nav-item">
@@ -68,7 +61,7 @@
                         <a class="nav-link" href="{{ route('about') }}">About Us</a>
                     </li>
                     @else
-                    li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('elist') }}">Event List</a>
                     </li>
                     <li class="nav-item">

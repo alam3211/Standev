@@ -22,7 +22,7 @@
 							<tr><th>Jadwal</th></tr>
 						</thead>
 						<tbody class="bg-warning" style="color: black; font-weight: 600;">
-							<tr><td>{{ $post->e_startdate }}</td></tr>
+							<tr><td>{{ $post->e_date }}</td></tr>
 						</tbody>
 					</table>
 				</div>
