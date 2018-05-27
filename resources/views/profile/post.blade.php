@@ -71,7 +71,7 @@
                 <h3 class="fs-subtitle">Upload foto standmu dan selesai!</h3> 
                 <div class="form-group {{ !$errors->has('file') ?: 'has-error' }}">
                     <label>Berkas</label>
-                    <input type="file" name="file" style="border:none;">
+                    <input type="file" name="s_photo" style="border:none;">
                     <span class="help-block text-danger">{{ $errors->first('file') }}</span>
                 </div>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>

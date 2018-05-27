@@ -20,6 +20,7 @@ class CreateTenant extends Migration
             $table->string('t_city');
             $table->string('t_telp');
             $table->string('t_email');
+            $table->string('t_type');
             $table->text('t_description');
             $table->string('t_product');
             $table->timestamps();

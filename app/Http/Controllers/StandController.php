@@ -12,7 +12,7 @@ class StandController extends Controller
 	protected function getStand() {
 
 		$standposts = DB::table('stand')
-					->join('event','stand.id_event','=','event.id')
+					->join('event','stand.e_id','=','event.e_id')
 					->get();
 
 		return view('elist',compact('standposts'));

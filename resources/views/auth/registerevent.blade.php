@@ -4,7 +4,7 @@
 <!-- MultiStep Form -->
 <div class="row">
     <div class="col-sm-6 col-md-offset-6 mx-auto">
-        <form id="msform" method="POST" action="{{route('regis_store_event')}}" style="margin-bottom: 40px;">
+        <form id="msform" method="POST" action="{{route('regis_store_event')}}" enctype="multipart/form-data" style="margin-bottom: 40px;">
             {{ csrf_field() }}
             <ul id="progressbar">
                 <li class="active">Pembuatan Akun</li>
@@ -44,6 +44,9 @@
                 <input type="text" name="e_desc" placeholder="Deskripsi Event"/>
                 <input type="date" name="e_date1" placeholder="Jadwal Mulai Event"/>
                 <input type="date" name="e_date2" placeholder="Jadwal Selesai Event"/>
+                <label>Berkas</label>
+                <input type="file" name="e_poster">
+                <span class="help-block text-danger">{{ $errors->first('file') }}</span>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="button" name="next" class="next action-button" value="Next"/>
             </fieldset>

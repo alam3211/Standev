@@ -14,6 +14,7 @@ class Tenant extends Model
             't_city',
             't_telp',
             't_email',
+            't_type',
             't_description',
             't_product',
     ];

@@ -7,16 +7,16 @@
 			@foreach($standposts as $post)
 				<div class="row" style="margin: 5px;">
 				<div class="col-md-3">
-					<img class="img-thumbnail float-left" src="images/thm.jpg"> </div>
-				<div class="col-md-5">
+					<img class="img-thumbnail float-left" src="{{ Storage::url($post->e_poster) }}"> </div>
+				<div class="col-md-3">
 					<h3>{{ $post->e_name }}</h3>
 					<p>{{ $post->e_description }}</p> 
 					<form action="book.php" method="post">
-					<button name="pesan" value="{{ $post->id }}" type="submit" class="btn btn-danger" style="padding:0px 10 0px 10px;">PESAN</button>
+					<button name="pesan" value="{{ $post->s_id }}" type="submit" class="btn btn-danger" style="padding:0px 10 0px 10px;">PESAN</button>
 					</form>
 				</div>
 
-				<div class="col-md-2 panel panel-default">
+				<div class="col-md-1 panel panel-default">
 					<table class="table" style="border-radius: 6px;">
 						<thead class="thead-light" style="text-align: center;">
 							<tr><th>Jadwal</th></tr>
@@ -24,7 +24,28 @@
 						<tbody class="bg-warning" style="color: black; font-weight: 600;">
 							<tr><td>{{ $post->e_startdate }}</td></tr>
 						</tbody>
-					</table></div>
+					</table>
+				</div>
+				<div class="col-md-2 panel panel-default">
+					<table class="table" style="border-radius: 6px;">
+						<thead class="thead-light" style="text-align: center;">
+							<tr><th>Tempat</th></tr>
+						</thead>
+						<tbody class="bg-warning" style="color: black; font-weight: 600;">
+							<tr><td>{{ $post->e_location.$post->e_city }}</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col-md-1 panel panel-default">
+					<table class="table" style="border-radius: 6px;">
+						<thead class="thead-light" style="text-align: center;">
+							<tr><th>Kuota</th></tr>
+						</thead>
+						<tbody class="bg-warning" style="color: black; font-weight: 600;">
+							<tr><td>{{ $post->s_available }}</td></tr>
+						</tbody>
+					</table>
+				</div>
 				<div class="col-md-2">
 					<table class="table">
 						<thead class="thead-light" style="text-align: center;">

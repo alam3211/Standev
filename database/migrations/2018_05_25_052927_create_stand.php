@@ -20,7 +20,6 @@ class CreateStand extends Migration
             $table->float('s_width',8,2);
             $table->integer('s_price');
             $table->integer('s_available');
-            $table->string('s_type');
             $table->text('s_fac_desc')->nullable();
             $table->string('s_photo');
             $table->timestamps();
