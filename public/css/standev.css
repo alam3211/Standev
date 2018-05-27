@@ -61,7 +61,7 @@ li.dropdown:hover > .dropdown-menu {
     z-index: 5;
 }
 
-#but button{
+#but button, #book-btn form{
     margin-top: 25px;
     margin-right: 10px;
 }
