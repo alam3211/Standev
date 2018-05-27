@@ -52,9 +52,9 @@ Main Components
   left: 0;
 }
 .cd-floating-background img:first-child {
-  -webkit-transform: translateZ(110px);
-  -ms-transform: translateZ(110px);
-  transform: translateZ(110px);
+  -webkit-transform: translateZ(200px);
+  -ms-transform: translateZ(200px);
+  transform: translateZ(200px);
 }
 .cd-floating-background img:nth-child(2) {
   -webkit-transform: translateZ(450px);

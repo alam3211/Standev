@@ -8,8 +8,8 @@ background-image : none;
 <div class="cd-background-wrapper">
 		<div class="parallax"></div>
         <figure class="cd-floating-background">
-            <img src="images/cd-img-1.png" alt="image-2">
-            <img src="images/cd-img-3.png" alt="image-3">
+            <img src="images/cd-img-1.png" alt="image-1">
+            <img src="images/cd-img-3.png" alt="image-2">
         </figure>
 </div>
 <div style="background:white;height: 450px;overflow: hidden;">
@@ -18,7 +18,22 @@ background-image : none;
     		<div class="col-sm-6 text-justify">
     			<h2>solusi yang mudah</h2>
     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    			<a href="{{ route('register_tenant') }}"><button class="action-button" >Daftar Sekarang</button></a>
+    			<button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">Daftar Sekarang</button>
+                <!-- MODAL REGISTER -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="row">
+                      <div class="modal-body col-sm-6">
+                        ...
+                      </div>
+                      <div class="modal-body col-sm-6">
+                        ...
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
     		</div>
     		<div class="col-sm-3">
     			<img src="images/m1.png">
