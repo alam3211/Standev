@@ -59,5 +59,9 @@
 li.dropdown:hover > .dropdown-menu {
     display: block;
     z-index: 5;
-    
+}
+
+#but button{
+    margin-top: 25px;
+    margin-right: 10px;
 }

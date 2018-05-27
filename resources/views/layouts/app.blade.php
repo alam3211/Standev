@@ -26,7 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.8;position: relative; z-index: 100;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('login') }}"><img src="{{ URL::asset('images/logo.png') }}" height="35px"></a>
+            <a class="navbar-brand" href="{{ route('index') }}"><img src="{{ URL::asset('images/logo.png') }}" height="35px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -52,12 +52,6 @@
                         <a class="nav-link" href="{{ route('elist') }}">Event List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('book') }}">Booking</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('profile') }}">Profile</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('about') }}">About Us</a>
                     </li>
                     @else
@@ -75,12 +69,12 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li class="nav-item">
+                               <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}
                                 </form>
-                            </li>
-                            <li class="nav-item">
-                               <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
                             </li>
                         </ul>
                     </li>
