@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use DB;
 use App\Event;
+use App\Tenant;
 class HomeController extends Controller
 {
     /**
@@ -37,16 +38,16 @@ class HomeController extends Controller
                     ->join('event','stand.e_id','=','event.e_id')
                     ->where('user_id',$getid)
                     ->get();
-            $imgprofile = Event::where('user_id',$getid)->first();
+            $imgprofile = Event::where('user_id',$getid)->first()->e_poster;
         }else{
             $profiles = DB::table('booking')
-                    ->join('tenant','booking.t_id','=','tenant.e_id')
+                    ->join('tenant','booking.t_id','=','tenant.t_id')
                     ->where('user_id',$getid)
                     ->get();
-
+            $imgprofile = Tenant::where('user_id',$getid)->first()->t_product;
         }
     }
     
-    return view('profile.profile',compact('profiles'))->with('imgprofile',$imgprofile->e_poster);
+    return view('profile.profile',compact('profiles'))->with('imgprofile',$imgprofile);
     }
 }

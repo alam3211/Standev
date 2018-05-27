@@ -22,6 +22,7 @@
 			<div class="col-md-9">
 			<div class="container rounded" style="background-color: white; padding: 10px;">
 				<div class="container rounded" style="background-color: grey;padding: 8px;"">
+				@if(Auth::User()->role === 1)
 					<h2>History Post</h2>
 					@foreach($profiles as $profile)
 					<div class="row">
@@ -30,7 +31,7 @@
 						</div>
 						<div class="col-md-5">
 							<h3>{{ $profile->e_name }}</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<p>{{ $profile->e_description }}</p>
 						</div>
 						<div class="col-md-5">
 							<table>
@@ -42,14 +43,44 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Sabtu, 5 Maret 2019 11.00 PM - 12.00 PM Gedung Aiola, Surabaya</td>
-										<td>150K - 300K</td>
+										<td>{{ $profile->e_startdate }}</td>
+										<td>{{ $profile->s_price }}</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
 					@endforeach
+				@else
+					<h2>History Post</h2>
+					@foreach($profiles as $profile)
+					<div class="row">
+						<div class="col-md-2">
+							<img class="img-thumbnail float-left" src="images/thm.jpg">
+						</div>
+						<div class="col-md-5">
+							<h3>{{ $profile->t_name }}</h3>
+							<p>{{ $profile->t_description }}</p>
+						</div>
+						<div class="col-md-5">
+							<table>
+								<thead>
+									<tr>
+										<th>Jadwal</th>
+										<th>Harga</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>{{ $profile->s_type }}</td>
+										<td>{{ $profile->s_price }}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					@endforeach
+				@endif
 					<div class="row pull-right">
 						<button class="btn btn-primary btn-lg align-right pull-right" style="margin: 5px;">Post Event</button>
 					</div>
