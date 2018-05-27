@@ -10,10 +10,12 @@
 					<img class="img-thumbnail float-left" src="{{ Storage::url($post->e_poster) }}"> </div>
 				<div class="col-md-3">
 					<h3>{{ $post->e_name }}</h3>
-					<p>{{ $post->e_description }}</p> 
-					<form action="book.php" method="post">
+					<p>{{ $post->e_description }}</p>
+					@if(Auth::User()->role !== 1)
+					<form action="{{ route('booking_store') }}"" method="post">
 					<button name="pesan" value="{{ $post->s_id }}" type="submit" class="btn btn-danger" style="padding:0px 10 0px 10px;">PESAN</button>
 					</form>
+					@endif
 				</div>
 
 				<div class="col-md-1 panel panel-default">
@@ -22,7 +24,7 @@
 							<tr><th>Jadwal</th></tr>
 						</thead>
 						<tbody class="bg-warning" style="color: black; font-weight: 600;">
-							<tr><td>{{ $post->e_startdate }}</td></tr>
+							<tr><td>{{ $post->e_date }}</td></tr>
 						</tbody>
 					</table>
 				</div>

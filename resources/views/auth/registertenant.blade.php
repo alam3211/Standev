@@ -3,7 +3,7 @@
 @section('content')
 <!-- MultiStep Form -->
 <div class="row">
-    <div class="col-sm-6 col-md-offset-6 mx-auto">
+    <div class="col-sm-6 col-md-offset-6 mx-auto" style="z-index: -3;">
         <form id="msform" method="POST" action="{{ route('regis_store_tenant') }}" enctype="multipart/form-data" style="margin-bottom: 40px;">
             {{ csrf_field() }}
             <ul id="progressbar">

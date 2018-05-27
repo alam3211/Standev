@@ -15,8 +15,7 @@ class Event extends Model
     	'e_city',
     	'e_telp',
     	'e_email',
-        'e_startdate',
-        'e_enddate',
+        'e_date',
         'e_description',
     	'e_poster',
     ];

@@ -22,6 +22,7 @@
 			<div class="col-md-9">
 			<div class="container rounded" style="background-color: white; padding: 10px;">
 				<div class="container rounded" style="background-color: grey;padding: 8px;"">
+					<h2>History Post</h2>
 					<div class="row">
 						<div class="col-md-2">
 							<img class="img-thumbnail float-left" src="images/thm.jpg">
@@ -47,8 +48,10 @@
 							</table>
 						</div>
 					</div>
+					<div class="row pull-right">
+						<button class="btn btn-primary btn-lg align-right pull-right" style="margin: 5px;">Post Event</button>
+					</div>
 				</div>
-				<button class="btn btn-primary btn-lg align-right pull-right" style="margin: 5px;">Post Event</button>
 			</div>
 			</div>
 		</div>

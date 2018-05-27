@@ -21,8 +21,7 @@ class CreateEvent extends Migration
             $table->string('e_city');
             $table->string('e_telp');
             $table->string('e_email');
-            $table->date('e_startdate');
-            $table->date('e_enddate');
+            $table->date('e_date');
             $table->text('e_description');
             $table->string('e_poster');
             $table->timestamps();
