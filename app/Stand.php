@@ -14,7 +14,6 @@ class Stand extends Model
             's_width',
             's_price',
             's_available',
-            's_type',
             's_fac_desc',
             's_photo',
     ];

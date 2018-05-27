@@ -3,7 +3,19 @@
 @section('content')
 	<div class="container" style="margin-top: 8%;">
 		<div class="row">
-			<div class="col-md-3">
+		<div class="card col-md-3">
+  			<img src="images/thm.jpg" alt="theproduct" style="width: 250px; height: 250px;">
+			  <h1>{{ Auth::User()->username }}</h1>
+			  <p class="title">Member of Stand Event</p>
+			  <div style="margin: 24px 0;">
+			    <a href="#"><i class="fa fa-dribbble"></i></a> 
+			    <a href="#"><i class="fa fa-twitter"></i></a>  
+			    <a href="#"><i class="fa fa-linkedin"></i></a>  
+			    <a href="#"><i class="fa fa-facebook"></i></a> 
+			 </div>
+			 <p><button>Contact</button></p>
+		</div>
+			<!-- <div class="col-md-3">
 				<div class="container">
 					<div class="row">
 						<div class="card card-profile text-center">
@@ -18,7 +30,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="col-md-9">
 			<div class="container rounded" style="background-color: white; padding: 10px;">
 				<div class="container rounded" style="background-color: grey;padding: 8px;"">
@@ -52,7 +64,7 @@
 					</div>
 					@endforeach
 				@else
-					<h2>History Post</h2>
+					<h2>Book History</h2>
 					@foreach($profiles as $profile)
 					<div class="row">
 						<div class="col-md-2">
@@ -72,8 +84,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>{{ $profile->s_type }}</td>
-										<td>{{ $profile->s_price }}</td>
+										<td>{{ $profile->t_name }}</td>
+										<td>{{ $profile->t_name }}</td>
 									</tr>
 								</tbody>
 							</table>

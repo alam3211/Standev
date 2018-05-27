@@ -25,14 +25,47 @@
 					<button class="btn btn-success">Price<br><b>{{ $post->s_price }}</b></button>
 					</span>
 					<span>
-					<button class="btn btn-dark"><b>Read<br>More</b></button>
+					<button class="btn btn-dark" data-toggle="modal" data-target="#readmore"><b>Read<br>More</b></button>
 					</span>
+
+					<div class="modal fade" id="readmore" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="color: black;">
+					  <div class="modal-dialog modal-dialog-centered" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h2 class="modal-title" id="exampleModalLongTitle">{{ $post->e_name }}</h2>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+						        <div><b>Description :</b> {{ $post->e_description }}</div><hr>
+						        <h3>About Event</h3>
+						        <div><b>Date : </b>{{ $post->e_date }}</div>
+						        <div><b>Location : </b>{{ $post->e_location }}</div>
+						        <div><b>City : </b>{{ $post->e_city }}</div>
+						        <hr>
+						        <h3>About Stand</h3>
+						        <div><b>Size : </b>{{ $post->s_length }} x {{ $post->s_width }} m<sup>2</sup></div>
+						        <div>Price : {{ $post->s_price }}</div>
+						        <div>Available : {{ $post->s_available }}</div><hr>
+						        <h3>For More Information</h3>
+						        <div><b>Email : </b>{{ $post->e_email }}</div>
+						        <div><b>Contact Person : </b>{{ $post->e_telp }}</div>
+						        
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
 					
 				</div>
 				<div class="col-md-1" style="margin-top: 15%;">
 					@if(Auth::Check())
 						@if(Auth::User()->role !== 1)
 						<form action="{{ route('booking_store') }}"" method="post">
+							{{ csrf_field() }}
 						<button name="pesan" value="{{ $post->s_id }}" type="submit" class="btn btn-danger">BOOKING</button>
 						</form>
 						@endif
