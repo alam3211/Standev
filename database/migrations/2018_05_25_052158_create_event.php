@@ -14,8 +14,8 @@ class CreateEvent extends Migration
     public function up()
     {
         Schema::create('event', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_login');
+            $table->increments('e_id');
+            $table->integer('user_id');
             $table->string('e_name');
             $table->string('e_location');
             $table->string('e_city');
@@ -23,9 +23,8 @@ class CreateEvent extends Migration
             $table->string('e_email');
             $table->date('e_startdate');
             $table->date('e_enddate');
-            $table->time('e_time');
             $table->text('e_description');
-            $table->binary('e_poster')
+            $table->string('e_poster');
             $table->timestamps();
         });
     }

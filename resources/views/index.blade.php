@@ -1,74 +1,35 @@
 @extends('layouts.app')
 
+@section('styling')
+background-image : none;
+@endsection    
+
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-6" style="padding-top: 10%;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-md-offset-2">
-                    <div class="panel panel-default">
-                    <div class="panel-body">
-                        <form class="form-horizontal" id="menu" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">Username</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-10 col-md-offset-4">
-                                <input type="submit" class="btn btn-primary btn-lg" value="Login" name="login-btn">
-                                </input>
-
-                                <a class="btn btn-link" id="hover" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-                    </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6" id="title" style="padding-top: 10%;">
-            <div class="title">Promote Stand Event <br>  with <br> StandEv</div>
-        </div>
+<div class="cd-background-wrapper">
+		<div class="parallax"></div>
+        <figure class="cd-floating-background">
+            <img src="images/cd-img-1.png" alt="image-2">
+            <img src="images/cd-img-3.png" alt="image-3">
+        </figure>
+</div>
+<div style="background:white;height: 450px;overflow: hidden;">
+    <div class="container" style="margin: 3%">
+    	<div class="row">
+    		<div class="col-sm-6 text-justify">
+    			<h2>solusi yang mudah</h2>
+    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    			<a href="{{ route('register_tenant') }}"><button class="action-button" >Daftar Sekarang</button></a>
+    		</div>
+    		<div class="col-sm-3">
+    			<img src="images/m1.png">
+    		</div>
+    		<div class="col-sm-3">
+    			<img src="images/m2.png">
+    		</div>
+    	</div>
     </div>
+</div>
+<div class="cd-background-wrapper">
+	<div class="parallax"></div>
 </div>
 @endsection

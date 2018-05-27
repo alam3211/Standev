@@ -15,14 +15,14 @@ class CreateStand extends Migration
     {
         Schema::create('stand', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_event');
+            $table->integer('e_id');
             $table->float('s_length',8,2);
             $table->float('s_width',8,2);
             $table->integer('s_price');
             $table->integer('s_available');
             $table->string('s_type');
-            $table->string('s_facility');
-            $table->binary('s_photo');
+            $table->text('s_fac_desc')->nullable();
+            $table->string('s_photo');
             $table->timestamps();
         });
     }

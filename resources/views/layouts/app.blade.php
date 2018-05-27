@@ -12,16 +12,21 @@
     <link rel="icon" type="image/png" href="images/logonya.png">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/standev.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/form.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" > <!-- Resource style -->
+    <script src="{{ URL::asset('js/modernizr.js') }}"></script> <!-- Modernizr -->
+    <link href="{{ URL::asset('css/standev.css') }}" rel="stylesheet">
     
+
+
 </head>
-<body style="background-image: url(images/standevx7.jpg);background-size: cover;">
+<body style="@yield('styling')">
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.8;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('index') }}"><img src="images/logo.png" height="35px"></a>
+            <a class="navbar-brand" href="{{ route('login') }}"><img src="{{ URL::asset('images/logo.png') }}" height="35px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,7 +37,23 @@
                         <a class="nav-link" href="{{ route('index') }}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        <a class="nav-link" href="{{ route('register_event') }}">Register Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register_tenant') }}">Register Tenant</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown link
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('elist') }}">Event List</a>
@@ -47,19 +68,28 @@
                         <a class="nav-link" href="{{ route('about') }}">About Us</a>
                     </li>
                     @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
+                    li class="nav-item">
+                        <a class="nav-link" href="{{ route('elist') }}">Event List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('post') }}">Posting</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
+                        {{ Auth::user()->username }}
                         </a>
-
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="nav-item">
+                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}
                                 </form>
                             </li>
+                            <li class="nav-item">
+                               <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
+                            </li>
                         </ul>
                     </li>
+                    <
                     @endguest
                 </ul>
             </div>
@@ -69,6 +99,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ URL::asset('js/jquery-2.1.1.js') }}"></script>
+    <script src="{{ URL::asset('js/main.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="{{ URL::asset('js/bootstrap.js') }}"></script>
+    <script src="{{ URL::asset('js/standev.js') }}"></script>
 </body>
 </html>

@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Event;
+use App\Tenant;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -28,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = ('/login');
 
     /**
      * Create a new controller instance.
@@ -43,30 +46,101 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param  array  $request
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator(array $data)
+    protected function euserStore(Request $request)
     {
-        return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+
+        $this->validate($request, [
+            'l_name' => 'required|string|max:255',
+            'l_email' => 'required|string|email|max:255',
+            'l_password' => 'required|string|min:6',
+            'e_name' => 'required|string|max:255',
+            'e_loc' => 'required|string|max:255',
+            'e_city' => 'required|string|max:255',
+            'e_desc' => 'required|string|max:255',
+            'e_date1' => 'required',
+            'e_date2' => 'required',
+            'e_telp' => 'required',
+            'e_email' => 'required|email',
+            ]);
+       
+
+        User::create([
+            'username' => $request->l_name,
+            'email' => $request->l_email,
+            'password' => Hash::make($request->l_password),
+            'role' => '1',
+            'status' => '0',
         ]);
+
+        $getid = User::where('username',$request->l_name)->first();
+
+        Event::create([
+            'user_id' => $getid->id,
+            'e_name' => $request->e_name,
+            'e_location' => $request->e_email,
+            'e_city' => $request->e_city,
+            'e_telp' => $request->e_telp,
+            'e_email' => $request->e_email,
+            'e_poster' => 'Hh',
+            'e_startdate' => $request->e_date1,
+            'e_enddate' => $request->e_date2,
+            'e_description' => $request->e_desc,
+        ]);
+
+        return redirect('/login');
+    }
+
+    protected function tuserStore(Request $request)
+    {
+
+        $this->validate($request, [
+            'l_name' => 'required|string|max:255',
+            'l_email' => 'required|string|email|max:255',
+            'l_password' => 'required|string|min:6',
+            't_name' => 'required|string|max:255',
+            't_city' => 'required|string|max:255',
+            't_desc' => 'required|string|max:255',
+            't_telp' => 'required',
+            't_email' => 'required|email',
+            ]);
+
+        User::create([
+            'username' => $request->l_name,
+            'email' => $request->l_email,
+            'password' => Hash::make($request->l_password),
+            'role' => '1',
+            'status' => '0',
+        ]);
+
+        $getid = User::where('username',$request->l_name)->first();
+
+        Event::create([
+            'user_id' => $getid->id,
+            'e_name' => $request->e_name,
+            'e_location' => $request->e_email,
+            'e_city' => $request->e_city,
+            'e_telp' => $request->e_telp,
+            'e_email' => $request->e_email,
+            'e_poster' => 'Hh',
+            'e_startdate' => $request->e_date1,
+            'e_enddate' => $request->e_date2,
+            'e_description' => $request->e_desc,
+        ]);
+
+        return redirect('/login');
     }
 
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  array  $request
      * @return \App\User
      */
-    protected function create(array $data)
+    protected function create(array $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
     }
+    
 }

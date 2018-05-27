@@ -14,14 +14,14 @@ class CreateTenant extends Migration
     public function up()
     {
         Schema::create('tenant', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_login');
+            $table->increments('t_id');
+            $table->integer('user_id');
             $table->string('t_name');
             $table->string('t_city');
             $table->string('t_telp');
             $table->string('t_email');
             $table->text('t_description');
-            $table->binary('t_product');
+            $table->string('t_product');
             $table->timestamps();
         });
     }
