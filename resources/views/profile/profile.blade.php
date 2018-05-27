@@ -64,7 +64,7 @@
 					</div>
 					@endforeach
 				@else
-					<h2>History Post</h2>
+					<h2>Book History</h2>
 					@foreach($profiles as $profile)
 					<div class="row">
 						<div class="col-md-2">
@@ -84,8 +84,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>{{ $profile->s_type }}</td>
-										<td>{{ $profile->s_price }}</td>
+										<td>{{ $profile->t_name }}</td>
+										<td>{{ $profile->t_name }}</td>
 									</tr>
 								</tbody>
 							</table>

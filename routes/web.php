@@ -19,8 +19,8 @@ Route::get('/reset_password', function () { return view('auth.reset'); })->name(
 Auth::Routes();
 Route::get('/aboutus', function () { return view('aboutus');})->name('about');
 
-Route::get('/event_list', 'StandController@getStand')->name('elist');
-Route::post('/event_list/booking','BookingController@bookStore')->name('booking_store');
+Route::get('/event_list','StandController@getStand')->name('elist');
+Route::post('/event_list','BookingController@bookStore')->name('booking_store');
 
 Route::get('/booking', function () { return view('book');})->name('book');
 
