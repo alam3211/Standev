@@ -63,18 +63,20 @@ class RegisterController extends Controller
             'e_date1' => 'required',
             'e_date2' => 'required',
             'e_telp' => 'required',
+            'e_poster' => 'required|file|max:2000|mimes:jpg.png',
             'e_email' => 'required|email',
             ]);
        
-
         User::create([
             'username' => $request->l_name,
-            'email' => $request->l_email,
             'password' => Hash::make($request->l_password),
             'role' => '1',
             'status' => '0',
         ]);
 
+        $uploadedFile = $request->file('e_poster');
+        $path = $uploadedFile->storeAs( 'public/files/profil',Auth::User()->username.$uploadedFile->getClientOriginalExtension()
+            );
         $getid = User::where('username',$request->l_name)->first();
 
         Event::create([
@@ -84,10 +86,10 @@ class RegisterController extends Controller
             'e_city' => $request->e_city,
             'e_telp' => $request->e_telp,
             'e_email' => $request->e_email,
-            'e_poster' => 'Hh',
             'e_startdate' => $request->e_date1,
             'e_enddate' => $request->e_date2,
             'e_description' => $request->e_desc,
+            'e_poster' => $path,
         ]);
 
         return redirect('/login');
@@ -105,29 +107,29 @@ class RegisterController extends Controller
             't_desc' => 'required|string|max:255',
             't_telp' => 'required',
             't_email' => 'required|email',
+            't_product' => 'required|file|max:2000|mimes:jpg.png',
             ]);
 
         User::create([
             'username' => $request->l_name,
-            'email' => $request->l_email,
             'password' => Hash::make($request->l_password),
-            'role' => '1',
+            'role' => '2',
             'status' => '0',
         ]);
 
+        $uploadedFile = $request->file('t_product');
+        $path = $uploadedFile->storeAs( 'public/files/profil',Auth::User()->username.$uploadedFile->getClientOriginalExtension()
+            );
         $getid = User::where('username',$request->l_name)->first();
 
-        Event::create([
+        Tenant::create([
             'user_id' => $getid->id,
-            'e_name' => $request->e_name,
-            'e_location' => $request->e_email,
-            'e_city' => $request->e_city,
-            'e_telp' => $request->e_telp,
-            'e_email' => $request->e_email,
-            'e_poster' => 'Hh',
-            'e_startdate' => $request->e_date1,
-            'e_enddate' => $request->e_date2,
-            'e_description' => $request->e_desc,
+            't_name' => $request->t_name,
+            't_city' => $request->t_city,
+            't_telp' => $request->t_telp,
+            't_email' => $request->t_email,
+            't_description' => $request->t_desc,
+            't_product' => $path,
         ]);
 
         return redirect('/login');

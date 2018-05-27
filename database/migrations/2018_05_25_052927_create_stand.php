@@ -14,7 +14,7 @@ class CreateStand extends Migration
     public function up()
     {
         Schema::create('stand', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('s_id');
             $table->integer('e_id');
             $table->float('s_length',8,2);
             $table->float('s_width',8,2);

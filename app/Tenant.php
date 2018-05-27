@@ -9,7 +9,7 @@ class Tenant extends Model
     //
     protected $table = 'tenant';
     protected $fillable = [
-            'id_login',
+            'user_id',
             't_name',
             't_city',
             't_telp',

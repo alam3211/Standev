@@ -9,12 +9,14 @@ class Stand extends Model
     //
     protected $table = 'stand';
     protected $fillable = [
-            'id_event',
+            'e_id',
             's_length',
             's_width',
             's_price',
             's_available',
-            's_facility',
+            's_type',
+            's_fac_desc',
+            's_photo',
     ];
 
 }
