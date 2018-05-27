@@ -28,7 +28,7 @@
 					</span>
 					
 				</div>
-				<div class="col-md-1">
+				<div class="col-md-1" style="margin-top: 15%;">
 					@if(Auth::Check())
 						@if(Auth::User()->role !== 1)
 						<form action="{{ route('booking_store') }}"" method="post">
