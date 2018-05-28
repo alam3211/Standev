@@ -4,7 +4,7 @@
 	<div class="container" style="margin-top: 8%;">
 		<div class="row">
 		<div class="card col-md-3">
-  			<img src="images/thm.jpg" alt="theproduct" style="width: 250px; height: 250px;">
+  			<img src="{{ Storage::url($imgprofile) }}" alt="theproduct" style="width: 250px; height: 250px;">
 			  <h1>{{ Auth::User()->username }}</h1>
 			  <p class="title">Member of Stand Event</p>
 			  <div style="margin: 24px 0;">
@@ -39,7 +39,7 @@
 					@foreach($profiles as $profile)
 					<div class="row">
 						<div class="col-md-2">
-							<img class="img-thumbnail float-left" src="images/thm.jpg">
+							<img class="img-thumbnail float-left" src="{{ Storage::url($profile->e_poster) }}">
 						</div>
 						<div class="col-md-5">
 							<h3>{{ $profile->e_name }}</h3>
@@ -55,7 +55,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>{{ $profile->e_startdate }}</td>
+										<td>{{ $profile->e_date }}</td>
 										<td>{{ $profile->s_price }}</td>
 									</tr>
 								</tbody>
@@ -68,11 +68,11 @@
 					@foreach($profiles as $profile)
 					<div class="row">
 						<div class="col-md-2">
-							<img class="img-thumbnail float-left" src="images/thm.jpg">
+							<img class="img-thumbnail float-left" src="{{ Storage::url($profile->s_photo) }}">
 						</div>
 						<div class="col-md-5">
-							<h3>{{ $profile->t_name }}</h3>
-							<p>{{ $profile->t_description }}</p>
+							<h3>{{ $profile->e_name }}</h3>
+							<p>{{ $profile->e_description }}</p>
 						</div>
 						<div class="col-md-5">
 							<table>
@@ -80,12 +80,14 @@
 									<tr>
 										<th>Jadwal</th>
 										<th>Harga</th>
+										<th>Status</th>
 									</tr>
 								</thead>
 								<tbody>
 									<tr>
-										<td>{{ $profile->t_name }}</td>
-										<td>{{ $profile->t_name }}</td>
+										<td>{{ $profile->e_date }}</td>
+										<td>{{ $profile->s_price }}</td>
+										<td>{{ $profile->book_status }}</td>
 									</tr>
 								</tbody>
 							</table>

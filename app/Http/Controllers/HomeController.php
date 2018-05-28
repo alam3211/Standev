@@ -42,7 +42,9 @@ class HomeController extends Controller
         }else{
             $profiles = DB::table('booking')
                     ->join('tenant','booking.t_id','=','tenant.t_id')
-                    ->where('user_id',$getid)
+                    ->join('stand','booking.s_id','=','stand.s_id')
+                    ->join('event','stand.e_id','=','event.e_id')
+                    ->where('tenant.user_id',$getid)
                     ->get();
             $imgprofile = Tenant::where('user_id',$getid)->first()->t_product;
         }

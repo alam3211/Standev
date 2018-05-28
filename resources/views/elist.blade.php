@@ -8,7 +8,7 @@
 			@foreach($standposts as $post)
 				<div class="row" style="margin: 10px;">
 				<div class="col-md-2">
-					<img class="img-thumbnail float-left" src="{{ Storage::url($post->e_poster) }}"> </div>
+					<img class="img-thumbnail float-left" src="{{ Storage::url($post->s_photo) }}"> </div>
 				<div class="col-md-9" id="but">
 					<h1>{{ $post->e_name }}</h1>
 					<p>{{ $post->e_description }}</p>

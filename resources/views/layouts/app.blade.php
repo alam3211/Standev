@@ -32,7 +32,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    @guest
+                @guest
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('index') }}">Home <span class="sr-only">(current)</span></a>
                     </li>
@@ -54,15 +54,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('about') }}">About Us</a>
                     </li>
-                    @else
+                @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('elist') }}">Event List</a>
                     </li>
-                    @if(Auth::User()->role === 1)
+                @if(Auth::User()->role === 1)
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('post') }}">Posting</a>
                     </li>
-                    @endif
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('book_list') }}">Posting</a>
+                    </li>
+                @endif
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
                         {{ Auth::user()->username }}
@@ -78,7 +81,7 @@
                             </li>
                         </ul>
                     </li>
-                    @endguest
+                @endguest
                 </ul>
             </div>
         </div>
