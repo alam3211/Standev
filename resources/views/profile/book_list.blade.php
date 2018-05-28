@@ -4,7 +4,6 @@
 <div class="container" style="margin-top: 10%;">
 	<table class="table table-hover">
 	  <thead class="bg-warning">
-	  	@foreach($booklists as $book)
 	    <tr>
 	      <th scope="col">#</th>
 	      <th scope="col">Tenant</th>
@@ -13,6 +12,7 @@
 	      <th scope="col">Action</th>
 	    </tr>
 	  </thead>
+	  @foreach($booklists as $book)
 	  <tbody class="table-light">
 	    <tr>
 	      <th scope="row">3</th>
@@ -20,8 +20,8 @@
 	      <td>{{ $book->t_type }}</td>
 	      <td>
 	      	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#images">
-                lihat
-                </button>
+            lihat
+            </button>
           </td>
 	      <td>
 	      	<form action="{{ route('booking_validation') }}"" method="post">
