@@ -48,7 +48,7 @@
                         </div>
                     </div>
                 </div>
-                <input id="fasilitas" type="text" class="form-control" name="s_desc" value="{{ old('email') }}" required placeholder="More description aboout facilities">
+                <input id="fasilitas" type="text" class="form-control" name="s_desc" value="{{ old('email') }}" placeholder="More description aboout facilities">
                     @if ($errors->has('s_desc'))
                         <span class="help-block">
                         <strong>{{ $errors->first('s_desc') }}</strong>
