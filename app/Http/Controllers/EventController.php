@@ -43,6 +43,6 @@ class EventController extends Controller
             's_photo' => $path,
         ]);
 
-        return view('profile.profile');
+        return redirect()->action('StandController@getStand');
     }
 }

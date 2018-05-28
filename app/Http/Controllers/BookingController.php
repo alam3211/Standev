@@ -33,7 +33,8 @@ class BookingController extends Controller
         $bookvalid = Booking::where('b_id',$request->bookid)->first();
         $bookvalid->book_status = $request->accept ?? $request->decline;
         $bookvalid->save();
-        return getbook();
+        
+        return redirect()->action('BookingController@getBook');
     }
 
 
