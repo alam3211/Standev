@@ -68,10 +68,6 @@ class RegisterController extends Controller
         //     report($e);
         //     return false;
         // }
-        if($this->fails()){
-            return $this->messages()->first();
-        }
-
         User::create([
             'username' => $request->l_name,
             'password' => Hash::make($request->l_password),
