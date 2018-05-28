@@ -69,7 +69,7 @@
 				<div class="col-md-1" style="margin-top: 15%;">
 					@if(Auth::Check())
 						@if(Auth::User()->role !== 1)
-						<form action="{{ route('booking_store') }}"" method="post">
+						<form action="{{ route('booking_store') }}" method="post">
 							{{ csrf_field() }}
 						<button name="pesan" value="{{ $post->s_id }}" type="submit" class="btn btn-danger">BOOKING</button>
 						</form>
