@@ -54,7 +54,6 @@ class RegisterController extends Controller
 
         $this->validate($request, [
             'l_name' => 'required|string|max:255',
-            'l_email' => 'required|string|email|max:255',
             'l_password' => 'required|string|min:6',
             'e_name' => 'required|string|max:255',
             'e_loc' => 'required|string|max:255',

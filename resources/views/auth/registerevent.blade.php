@@ -3,7 +3,7 @@
 @section('content')
 <!-- MultiStep Form -->
 <div class="row">
-    <div class="col-sm-6 col-md-offset-6 mx-auto" style="z-index: -3;">
+    <div class="col-sm-6 col-md-offset-6 mx-auto" style="z-index: 1;">
         <form id="msform" method="POST" action="{{route('regis_store_event')}}" enctype="multipart/form-data" style="margin-bottom: 40px; z-index: -1;">
             {{ csrf_field() }}
             <ul id="progressbar">
@@ -19,12 +19,6 @@
                     @if ($errors->has('name'))
                         <span class="help-block">
                         <strong>{{ $errors->first('name') }}</strong>
-                        </span>
-                    @endif
-                <input id="email" type="email" class="form-control" name="l_email" value="{{ old('email') }}" required placeholder="Email@email.com">
-                    @if ($errors->has('email'))
-                        <span class="help-block">
-                        <strong>{{ $errors->first('email') }}</strong>
                         </span>
                     @endif
                 <input id="password" type="password" class="form-control" name="l_password" required placeholder="password">
@@ -43,8 +37,8 @@
                 <input type="text" name="e_city" placeholder="Kota Event"/>
                 <input type="text" name="e_desc" placeholder="Deskripsi Event"/>
                 <input type="date" name="e_date1" placeholder="Jadwal Event"/>
-                <label>Berkas</label>
-                <input type="file" name="e_poster">
+                <label>Foto Stand</label>
+                <input type="file" name="e_poster"style="border: none;>
                 <span class="help-block text-danger">{{ $errors->first('file') }}</span>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="button" name="next" class="next action-button" value="Next"/>

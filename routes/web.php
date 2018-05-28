@@ -23,6 +23,7 @@ Route::get('/event_list','StandController@getStand')->name('elist');
 Route::post('/event_list','BookingController@bookStore')->name('booking_store');
 
 Route::get('/booking', function () { return view('book');})->name('book');
+Route::get('/booking_list','BookingController@getBook')->name('book_list');
 
 //Route::get('/profile', function () { return view('profile.profile');})->name('profile');
 Route::get('/profile','HomeController@getProfile')->name('profile');
@@ -30,9 +31,8 @@ Route::get('/profile','HomeController@getProfile')->name('profile');
 Route::get('/post', function () { return view('profile.post');})->name('post');
 Route::post('/post','EventController@store')->name('post_store');
 
+
 Route::get('/register/event',function(){ return view('auth.registerevent');})->name('register_event');
 Route::post('/register/event','Auth\RegisterController@euserStore')->name('regis_store_event');
-
-
 Route::get('/register/tenant',function(){ return view('auth.registertenant');})->name('register_tenant');
 Route::post('/register/tenant','Auth\RegisterController@tuserStore')->name('regis_store_tenant');

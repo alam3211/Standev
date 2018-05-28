@@ -23,16 +23,15 @@
                  <div class="d-flex justify-content-start">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me 
+                            <input type="checkbox" name="remember" style="width: auto;" {{ old('remember') ? 'checked' : '' }}> Remember Me 
                         </label>
 
                     </div>
-                </div>  
-                           
-                <input type="submit" class="submit action-button" value="Submit"/>
+                </div>                             
+                <input type="submit" class="submit action-button" value="Login"/>
                 <a class="btn btn-link" id="hover" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>         
+                Forgot Your Password?
+                </a>         
             </fieldset>            
         </form>
     </div>

@@ -24,7 +24,7 @@ background-image : none;
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content transparent">
                       <div class="modal-body">
-                        <a href=""><h4><button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">I'm a Tenant</button></h4></a>
+                        <a href="#"><h4><button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">I'm a Tenant</button></h4></a>
                       </div>
                     </div>
                      <div class="modal-content transparent" style="margin: 5%;"">

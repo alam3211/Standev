@@ -49,6 +49,7 @@ body {
 
 /*inputs*/
 #msform input, #msform textarea {
+    width: 100%;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 0px;
@@ -174,7 +175,7 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before, #progressbar li.active:after {
-    background: #2980b9;
+    background: #c0392b;
     color: white;
 }
 
