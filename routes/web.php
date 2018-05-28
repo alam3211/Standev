@@ -21,7 +21,7 @@ Route::get('/aboutus', function () { return view('aboutus');})->name('about');
 
 Route::get('/event_list','StandController@getStand')->name('elist');
 Route::post('/event_list','BookingController@bookStore')->name('booking_store');
-Route::post('/event_list','BookingController@bookValidation')->name('booking_validation');
+Route::post('/event_list/validation','BookingController@bookValidation')->name('booking_validation');
 
 Route::get('/booking', function () { return view('book');})->name('book');
 Route::get('/booking_list','BookingController@getBook')->name('book_list');
