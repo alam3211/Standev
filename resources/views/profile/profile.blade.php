@@ -5,7 +5,7 @@
 		<div class="row">
 		<div class="col-md-3 card" style="display: table; background-color: white; color: black;">
 			@if(Auth::User()->role === 1)
-  			<img src="{{ Storage::url($profiles->first()->e_poster) }}" alt="theproduct" style="width: 250px; height: 250px;">
+  			<img src="{{ Storage::url($profiles->first()->e_poster) }}" alt="thevent" style="width: 250px; height: 250px;">
   			<div>
 			  <h1>{{ $profiles->first()->e_name }}</h1>
 			  <p>Admin @ {{ Auth::User()->username }}</p>

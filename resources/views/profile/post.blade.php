@@ -80,4 +80,9 @@
         </form>
     </div>
 </div>
+<style type="text/css">
+    .form-check input {
+        margin-left: 20px;
+    }
+</style>
 @endsection
