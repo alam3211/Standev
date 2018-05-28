@@ -32,7 +32,7 @@
             <fieldset>
                 <h2 class="fs-title">Informasi Diri</h2>
                 <h3 class="fs-subtitle">Masukkan detail informasi tentang kamu !</h3>
-                <input type="text" name="t_name" placeholder="Nama Lengkap"/>
+                <input type="text" name="t_name" placeholder="Nama Product"/>
                 <input type="text" name="t_city" placeholder="Lokasi Tinggal"/>
                 <input type="text" name="t_telp" placeholder="Nomor Telefon"/>
                 <input type="email" name="t_email" placeholder="Email Narahubung"/>
@@ -43,8 +43,8 @@
                 <h2 class="fs-title">Product Zone</h2>
                 <h3 class="fs-subtitle">Yuk ceritain apa yang kamu jual!</h3>
                 <div class="form-group">
-                    <label>Berkas</label>
-                      <input type="file" name="t_product">
+                    <label>Foto Product</label>
+                      <input type="file" name="t_product" style="border: none;">
                       <span class="help-block text-danger">{{ $errors->first('file') }}</span>
                     <label for="t_type">Tipe Stand</label>
                     <select class="form-control" name="t_type" id="t_type">

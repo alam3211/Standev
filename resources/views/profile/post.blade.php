@@ -70,7 +70,7 @@
                 <h2 class="fs-title">Upload Stand</h2>
                 <h3 class="fs-subtitle">Upload foto standmu dan selesai!</h3> 
                 <div class="form-group {{ !$errors->has('file') ?: 'has-error' }}">
-                    <label>Berkas</label>
+                    <label>Foto Booth</label>
                     <input type="file" name="s_photo" style="border:none;">
                     <span class="help-block text-danger">{{ $errors->first('file') }}</span>
                 </div>

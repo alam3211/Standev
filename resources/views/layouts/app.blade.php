@@ -63,7 +63,7 @@
                         <a class="nav-link" href="{{ route('post') }}">Posting</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('book_list') }}">Posting</a>
+                        <a class="nav-link" href="{{ route('book_list') }}">Booking List</a>
                     </li>
                 @endif
                     <li class="nav-item dropdown">
