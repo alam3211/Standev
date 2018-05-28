@@ -4,8 +4,18 @@
 background-image : none;
 @endsection    
 
-@section('content')
+@section('head')
+    <script src="{{ URL::asset('js/please-wait.min.js') }}"></script>
+    <script type="text/javascript">
+        window.loading_screen = window.pleaseWait({
+          logo: "images/logonya.png",
+          backgroundColor: '#c0392b',
+          loadingHtml: "<div class='sk-spinner sk-spinner-wave'><div class='sk-rect1'></div><div class='sk-rect2'></div><div class='sk-rect3'></div><div class='sk-rect4'></div><div class='sk-rect5'></div></div>"
+        });
+    </script>
+@endsection
 
+@section('content')
 <div class="cd-background-wrapper">
 		<div class="parallax"></div>
         <figure class="cd-floating-background">
@@ -102,4 +112,7 @@ background-image : none;
             color: #99ccff;
         }
     </style>
+       <script type="text/javascript">
+            window.loading_screen.finish();
+        </script> 
 @endsection

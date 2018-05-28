@@ -22,14 +22,7 @@
 
 </head>
 <body style="@yield('styling') z-index: 10;">
-    <script src="{{ URL::asset('js/please-wait.min.js') }}"></script>
-    <script type="text/javascript">
-        window.loading_screen = window.pleaseWait({
-          logo: "images/logonya.png",
-          backgroundColor: '#c0392b',
-          loadingHtml: "<div class='sk-spinner sk-spinner-wave'><div class='sk-rect1'></div><div class='sk-rect2'></div><div class='sk-rect3'></div><div class='sk-rect4'></div><div class='sk-rect5'></div></div>"
-        });
-    </script>
+    @yield('head')
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.8;position: relative; z-index: 100;">
         <div class="container-fluid">
@@ -103,7 +96,6 @@
     <script src="{{ URL::asset('js/standev.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-    <script type="text/javascript">window.loading_screen.finish();
-        </script> 
+ 
     </body>
 </html>
