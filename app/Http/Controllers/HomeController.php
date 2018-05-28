@@ -33,16 +33,18 @@ class HomeController extends Controller
         
     if (Auth::Check()) {
         $getid = Auth::User()->id;
-        if (Auth::User()->role === 1) {
+        if (Auth::User()->role === 1) { #event profile
             $profiles = DB::table('stand')
                     ->join('event','stand.e_id','=','event.e_id')
                     ->where('user_id',$getid)
                     ->get();
             $imgprofile = Event::where('user_id',$getid)->first()->e_poster;
-        }else{
+        }else{ #tenant profile
             $profiles = DB::table('booking')
                     ->join('tenant','booking.t_id','=','tenant.t_id')
-                    ->where('user_id',$getid)
+                    ->join('stand','stand.s_id','=','booking.s_id')
+                    ->join('event','event.e_id','=','stand.e_id')
+                    ->where('tenant.user_id',$getid)
                     ->get();
             $imgprofile = Tenant::where('user_id',$getid)->first()->t_product;
         }
