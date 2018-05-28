@@ -5,6 +5,7 @@
 	<table class="table table-hover">
 	  <thead class="bg-warning">
 	  	@foreach($booklists as $book)
+	  		@php $count=0 @endphp
 	    <tr>
 	      <th scope="col">#</th>
 	      <th scope="col">Tenant</th>
@@ -15,7 +16,7 @@
 	  </thead>
 	  <tbody class="table-light">
 	    <tr>
-	      <th scope="row">3</th>
+	      <th scope="row">{{ $count+=1 }}</th>
 	      <td>{{ $book->t_name }}</td>
 	      <td>{{ $book->t_type }}</td>
 	      <td>
