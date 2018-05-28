@@ -22,6 +22,7 @@
 
 </head>
 <body style="@yield('styling') z-index: 10;">
+<<<<<<< HEAD
     @yield('head')
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.8;position: relative; z-index: 100;">
