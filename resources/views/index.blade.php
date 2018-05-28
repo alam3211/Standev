@@ -5,6 +5,7 @@ background-image : none;
 @endsection    
 
 @section('content')
+
 <div class="cd-background-wrapper">
 		<div class="parallax"></div>
         <figure class="cd-floating-background">

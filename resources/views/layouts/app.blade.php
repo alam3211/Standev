@@ -15,14 +15,23 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/form.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" > <!-- Resource style -->
-    <script src="{{ URL::asset('js/modernizr.js') }}"></script> <!-- Modernizr -->
+    <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" >
+    <script src="{{ URL::asset('js/modernizr.js') }}"></script>
     <link href="{{ URL::asset('css/standev.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/please-wait.css') }}" rel="stylesheet" >
     
 
 
 </head>
 <body style="@yield('styling') z-index: 10;">
+    <script src="{{ URL::asset('js/please-wait.min.js') }}"></script>
+    <script type="text/javascript">
+        window.loading_screen = window.pleaseWait({
+          logo: "images/logonya.png",
+          backgroundColor: '#c0392b',
+          loadingHtml: "<div class='sk-spinner sk-spinner-wave'><div class='sk-rect1'></div><div class='sk-rect2'></div><div class='sk-rect3'></div><div class='sk-rect4'></div><div class='sk-rect5'></div></div>"
+        });
+    </script>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="opacity: 0.8;position: relative; z-index: 100;">
         <div class="container-fluid">
@@ -93,8 +102,10 @@
     <script src="{{ URL::asset('js/jquery-2.1.1.js') }}"></script>
     <script src="{{ URL::asset('js/main.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ URL::asset('js/standev.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ URL::asset('js/standev.js') }}"></script>
-</body>
+    <script type="text/javascript">window.loading_screen.finish();
+        </script> 
+    </body>
 </html>

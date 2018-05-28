@@ -6,6 +6,15 @@
     <div class="col-sm-6 col-md-offset-6 mx-auto" style="z-index: 1;">
         <form id="msform" method="POST" action="{{ route('regis_store_tenant') }}" enctype="multipart/form-data" style="margin-bottom: 40px;">
             {{ csrf_field() }}
+
+        @if(count($errors)>0)
+            <ul>
+                @foreach($errors->all() as $error)
+                <li class="alert alert-danger">{{$error}}</li>
+                    @endforeach
+        
+            </ul>
+        @endif
             <ul id="progressbar">
                 <li class="active">Make Account</li>
                 <li>Detail Information</li>
@@ -16,17 +25,7 @@
                 <h2 class="fs-title">Make an Account</h2>
                 <h3 class="fs-subtitle">Lets make your Account!</h3>
                 <input id="name" type="text" class="form-control" name="l_name" value="{{ old('l_name') }}" required placeholder="Username">
-                    @if ($errors->has('name'))
-                        <span class="help-block">
-                        <strong>{{ $errors->first('name') }}</strong>
-                        </span>
-                    @endif
                 <input id="password" type="password" class="form-control" name="l_password" required placeholder="password">
-                    @if ($errors->has('password'))
-                        <span class="help-block">
-                        <strong>{{ $errors->first('password') }}</strong>
-                        </span>
-                    @endif
                 <input type="button" name="next" class="next action-button" value="Next"/>
             </fieldset>
             <fieldset>

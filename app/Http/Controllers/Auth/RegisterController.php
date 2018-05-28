@@ -101,7 +101,7 @@ class RegisterController extends Controller
             't_telp' => 'required',
             't_type' => 'required',
             't_email' => 'required|email',
-            't_product' => 'file|max:2000|mimes:jpeg,png',
+            't_product' => 'required|file|max:2000|mimes:jpeg,png',
             ]);
 
         User::create([
