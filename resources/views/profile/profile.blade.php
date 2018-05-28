@@ -36,10 +36,11 @@
 			<div class="col-md-9">
 			<div class="container rounded" style="background-color: white; padding: 10px;">
 				<div class="container rounded" style="background-color: white; color: black; padding: 8px;"">
-				<div class="row pull-right">
-					<a class="btn btn-primary btn-lg pull-right" href="/event_list" style="margin-left: -70px; padding: 7px 15px;">+</a>
-				</div>
+				
 				@if(Auth::User()->role === 1)
+					<div class="row pull-right">
+						<a class="btn btn-primary btn-lg pull-right" href="{{ route('post') }}" style="margin-left: -70px; padding: 7px 15px;">+</a>
+					</div>
 					<h2>History Post</h2><hr>
 					@foreach($profiles as $profile)
 					<div class="row">
@@ -73,6 +74,9 @@
 					</div><hr>
 					@endforeach
 				@else
+					<div class="row pull-right">
+						<a class="btn btn-primary btn-lg pull-right" href="{{ route('elist') }}" style="margin-left: -70px; padding: 7px 15px;">+</a>
+					</div>
 					<h2>Book History</h2><hr>
 					@foreach($profiles as $profile)
 					<div class="row">

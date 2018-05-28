@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Tenant;
 use App\Booking;
 use App\Event;
 use DB;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -28,6 +28,15 @@ class BookingController extends Controller
         return redirect('/profile');
     }
 
+    public function bookValidation(Request $request)
+    {
+        $bookvalid = Booking::where('b_id',$request->bookid)->first();
+        $bookvalid->book_status = $request->accept ?? $request->decline;
+        $bookvalid->save();
+        return getbook();
+    }
+
+
     public function getBook()
     {
         $id = Auth::User()->id;
@@ -37,6 +46,7 @@ class BookingController extends Controller
                     ->join('event','stand.e_id','=','event.e_id')
                     ->join('tenant','booking.t_id','=','tenant.t_id')
                     ->where('event.e_id',$e_id)
+                    ->where('booking.book_status','0')
                     ->get();
 
         return view('profile.book_list',compact('booklists'));

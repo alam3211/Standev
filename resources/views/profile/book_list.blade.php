@@ -26,6 +26,7 @@
 	      <td>
 	      	<form action="{{ route('booking_validation') }}"" method="post">
 				{{ csrf_field() }}
+				<input type="hidden" name="bookid" value="{{ $book->b_id }}">
 	      		<button type="submit" name="accept" value="1" class="btn btn-success">Accept</button>
 	      		<button type="submit" name="decline" value="2" class="btn btn-danger">Decline</button>
 	      	</form>
