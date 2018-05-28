@@ -8,12 +8,15 @@
 			@foreach($standposts as $post)
 				<div class="row" style="margin: 10px;">
 				<div class="col-md-2">
-					<img class="img-thumbnail float-left" src="{{ Storage::url($post->s_photo) }}"> </div>
+					<img class="img-thumbnail float-left" src="{{ Storage::url($post->e_poster) }}"> </div>
 				<div class="col-md-9" id="but">
 					<h1>{{ $post->e_name }}</h1>
 					<p>{{ $post->e_description }}</p>
 					<span>
 					<button class="btn btn-danger">Kuota<br><b>{{ $post->s_available }}</b></button>
+					</span>
+					<span>
+					<button class="btn btn-secondary">Stand Size<br><b>{{ $post->s_length }} x {{ $post->s_width }} m<sup>2</sup></b></button>
 					</span>
 					<span>
 					<button class="btn btn-warning">Date<br><b>{{ $post->e_date }}</b></button>
@@ -45,9 +48,11 @@
 						        <div><b>City : </b>{{ $post->e_city }}</div>
 						        <hr>
 						        <h3>About Stand</h3>
+						        <div><img src="{{ Storage::url($post->s_photo) }}" style="width: 200px; height: 200px;"></div>
 						        <div><b>Size : </b>{{ $post->s_length }} x {{ $post->s_width }} m<sup>2</sup></div>
-						        <div>Price : {{ $post->s_price }}</div>
-						        <div>Available : {{ $post->s_available }}</div><hr>
+						        <div><b>Facility : </b>{{ $post->s_fac_desc }}</div>
+						        <div><b>Price : </b>{{ $post->s_price }}</div>
+						        <div><b>Available : </b>{{ $post->s_available }}</div><hr>
 						        <h3>For More Information</h3>
 						        <div><b>Email : </b>{{ $post->e_email }}</div>
 						        <div><b>Contact Person : </b>{{ $post->e_telp }}</div>
@@ -71,16 +76,6 @@
 						@endif
 					@endif
 				</div>
-				<!-- <div class="col-md-2 panel panel-default">
-					<table class="table" style="border-radius: 6px;">
-						<thead class="thead-light" style="text-align: center;">
-							<tr><th>Tempat</th></tr>
-						</thead>
-						<tbody class="bg-warning" style="color: black; font-weight: 600;">
-							<tr><td>{{ $post->e_location.$post->e_city }}</td></tr>
-						</tbody>
-					</table>
-				</div> -->
 				</div>
 			@endforeach
 		</div>
