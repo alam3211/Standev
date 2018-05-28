@@ -16,19 +16,19 @@ background-image : none;
     <div class="container" style="margin: 3%">
     	<div class="row">
     		<div class="col-sm-6 text-justify">
-    			<h2>solusi yang mudah</h2>
+    			<h2>The BEST Solution!</h2>
     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    			<button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">Daftar Sekarang</button>
+    			<button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">Register Now</button>
                 <!-- MODAL REGISTER -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content transparent">
                       <div class="modal-body">
-                        <a href="#"><h4><button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">I'm a Tenant</button></h4></a>
+                        <a href="{{ route('register_tenant') }}"><h4><button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">I'm a Tenant</button></h4></a>
                       </div>
                     </div>
                      <div class="modal-content transparent" style="margin: 5%;"">
-                        <a href=""><h4><button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">I have an Event</button></h4></a>
+                        <a href="{{ route('register_event') }}"><h4><button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">I have an Event</button></h4></a>
                     </div>
                   </div>
                 </div>

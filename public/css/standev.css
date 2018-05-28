@@ -111,3 +111,8 @@ sup {
 .card button:hover, a:hover {
   opacity: 0.7;
 }
+
+#about-us img:hover{
+  z-index: 5;
+  transform: scale(1.5);
+}

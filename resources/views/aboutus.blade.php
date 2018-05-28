@@ -3,7 +3,7 @@
 @section('content')
 	<div class="container" style="padding-top: 8%;">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12" id="about-us">
 					<img class="img-fluid mx-auto d-block" src="images/logo-lg.png">
 			</div>
 		</div>

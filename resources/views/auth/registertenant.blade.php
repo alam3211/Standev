@@ -7,14 +7,14 @@
         <form id="msform" method="POST" action="{{ route('regis_store_tenant') }}" enctype="multipart/form-data" style="margin-bottom: 40px;">
             {{ csrf_field() }}
             <ul id="progressbar">
-                <li class="active">Pembuatan Akun</li>
-                <li>Informasi Detail</li>
-                <li>Narahubung</li>
+                <li class="active">Make Account</li>
+                <li>Detail Information</li>
+                <li>More About Product</li>
             </ul>
             <!-- fieldsets -->
             <fieldset>
-                <h2 class="fs-title">Buat Akun</h2>
-                <h3 class="fs-subtitle">Yuk buat akunmu!</h3>
+                <h2 class="fs-title">Make an Account</h2>
+                <h3 class="fs-subtitle">Lets make your Account!</h3>
                 <input id="name" type="text" class="form-control" name="l_name" value="{{ old('l_name') }}" required placeholder="Username">
                     @if ($errors->has('name'))
                         <span class="help-block">
@@ -30,32 +30,32 @@
                 <input type="button" name="next" class="next action-button" value="Next"/>
             </fieldset>
             <fieldset>
-                <h2 class="fs-title">Informasi Diri</h2>
-                <h3 class="fs-subtitle">Masukkan detail informasi tentang kamu !</h3>
-                <input type="text" name="t_name" placeholder="Nama Product"/>
-                <input type="text" name="t_city" placeholder="Lokasi Tinggal"/>
-                <input type="text" name="t_telp" placeholder="Nomor Telefon"/>
-                <input type="email" name="t_email" placeholder="Email Narahubung"/>
+                <h2 class="fs-title">Product Information</h2>
+                <h3 class="fs-subtitle">Enter the detail information about the product of your tenant !</h3>
+                <input type="text" name="t_name" placeholder="Product Name"/>
+                <input type="text" name="t_city" placeholder="Location of Production"/>
+                <input type="text" name="t_telp" placeholder="Contact Person"/>
+                <input type="email" name="t_email" placeholder="Email"/>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="button" name="next" class="next action-button" value="Next"/>
             </fieldset>
             <fieldset>
                 <h2 class="fs-title">Product Zone</h2>
-                <h3 class="fs-subtitle">Yuk ceritain apa yang kamu jual!</h3>
+                <h3 class="fs-subtitle">More about your product !</h3>
                 <div class="form-group">
-                    <label>Foto Product</label>
-                      <input type="file" name="t_product" style="border: none;">
-                      <span class="help-block text-danger">{{ $errors->first('file') }}</span>
-                    <label for="t_type">Tipe Stand</label>
+                    <label for="t_type">Type of Product</label>
                     <select class="form-control" name="t_type" id="t_type">
-                      <option value="Makanan & Minuman" >Makanan & Minuman</option>
+                      <option value="Food & Drink" >Food & Drink</option>
                       <option value="Fashion">Fashion</option>
                       <option value="Merchandise">Merchandise</option>
-                      <option value="Jasa">Jasa</option>
+                      <option value="Services">Services</option>
                       <option value="Marketing & Property">Marketing & Property</option>
                     </select>
                 </div>
-                <input type="text" name="t_desc" placeholder="Deskripsi Produk kamu"/>
+                <input type="text" name="t_desc" placeholder="Description about your product"/>
+                <label>Product Photo</label>
+                    <input type="file" name="t_product" style="border: none;">
+                    <span class="help-block text-danger">{{ $errors->first('file') }}</span>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="submit" class="submit action-button" value="Submit"/>
             </fieldset>
