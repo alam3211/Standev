@@ -28,10 +28,9 @@
 					<button class="btn btn-success">Price<br><b>{{ $post->s_price }}</b></button>
 					</span>
 					<span>
-					<button class="btn btn-dark" data-toggle="modal" data-target="#readmore"><b>Read<br>More</b></button>
+					<button class="btn btn-dark" data-toggle="modal" data-target="#readmore{{ $post->s_id }}"><b>Read<br>More</b></button>
 					</span>
-
-					<div class="modal fade" id="readmore" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="color: black;">
+					<div class="modal fade" id="readmore{{ $post->s_id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="color: black;">
 					  <div class="modal-dialog modal-dialog-centered" role="document">
 					    <div class="modal-content">
 					      <div class="modal-header">
@@ -55,8 +54,7 @@
 						        <div><b>Available : </b>{{ $post->s_available }}</div><hr>
 						        <h3>For More Information</h3>
 						        <div><b>Email : </b>{{ $post->e_email }}</div>
-						        <div><b>Contact Person : </b>{{ $post->e_telp }}</div>
-						        
+						        <div><b>Contact Person : </b>{{ $post->e_telp }}</div>      
 					      </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -64,7 +62,6 @@
 					    </div>
 					  </div>
 					</div>
-					
 				</div>
 				<div class="col-md-1" style="margin-top: 17%; margin-left: -10%;">
 					@if(Auth::Check())
