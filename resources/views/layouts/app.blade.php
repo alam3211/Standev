@@ -19,8 +19,6 @@
     <script src="{{ URL::asset('js/modernizr.js') }}"></script>
     <link href="{{ URL::asset('css/standev.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('css/please-wait.css') }}" rel="stylesheet" >
-    
-
 
 </head>
 <body style="@yield('styling') z-index: 10;">

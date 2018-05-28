@@ -51,7 +51,7 @@ class RegisterController extends Controller
      */
     public function euserStore(Request $request)
     {
-
+        // try{
         $this->validate($request, [
             'l_name' => 'required|string|max:255',
             'l_password' => 'required|string|min:6',
@@ -64,7 +64,14 @@ class RegisterController extends Controller
             'e_poster' => 'file|max:2000|mimes:jpeg,png',
             'e_email' => 'required|email',
             ]);
-        
+        // } catch(Exception $e){
+        //     report($e);
+        //     return false;
+        // }
+        if($this->fails()){
+            return $this->messages()->first();
+        }
+
         User::create([
             'username' => $request->l_name,
             'password' => Hash::make($request->l_password),

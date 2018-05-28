@@ -43,7 +43,63 @@ background-image : none;
     	</div>
     </div>
 </div>
+
+<div class="our_service_area" style="background-color: transparent;">
+    <div class="container" >
+        <div class="main_title">
+                    <h2 style="text-align: center;">Why Choose StandEv ?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service_item">
+                            <i class="fa fa-user fa-fw"></i>
+                            <a href="#"><h3>Data In Cloud</h3></a>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service_item">
+                            <i class="fa fa-user fa-fw"></i>
+                            <a href="#"><h3>Make it Easy ! </h3></a>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service_item">
+                            <i class="fa fa-user fa-fw"></i>
+                            <a href="#"><h3>Facilitate Users</h3></a>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 <div class="cd-background-wrapper">
-	<div class="parallax"></div>
+    <div class="parallax"></div>
 </div>
+<footer class="footer-social-icon text-center " id="footer" style="background-color: #993333; color: white; padding: 1%;">
+        <div class="footer-text">
+            <h2>StandEv</h2>
+        </div>
+        <hr style="background-color: white;">
+        <div class="footer-social-icon">
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="active fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        </div>
+        <div class="footer-menu">
+            <nav>
+                <a href="#">About</a> | <a href="#">Terms &amp; Conditions</a> | <a href="#">Contact</a>
+            </nav>
+        </div>
+        <div class="copyright-text">
+            <p>Copyright ©2018 StandEv Designed by <a href="#" target="_blank">Potato Dev</a></p>
+        </div>
+    </footer>
+    <style type="text/css">
+        #footer a {
+            color: #99ccff;
+        }
+    </style>
 @endsection
