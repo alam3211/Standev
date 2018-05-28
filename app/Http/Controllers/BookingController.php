@@ -17,7 +17,7 @@ class BookingController extends Controller
     {
     	$id = Auth::User()->id;
     	$t_id = Tenant::where('user_id',$id)->first()->t_id;
-    	$book_time = date("Y-m-d");
+    	$book_time = date("Y-m-d H:i:s");
         Booking::create([
             's_id' => $request->pesan,
             't_id' => $t_id,

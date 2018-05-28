@@ -18,8 +18,6 @@
     <link href="{{ URL::asset('css/style.css') }}" rel="stylesheet" > <!-- Resource style -->
     <script src="{{ URL::asset('js/modernizr.js') }}"></script> <!-- Modernizr -->
     <link href="{{ URL::asset('css/standev.css') }}" rel="stylesheet">
-    
-
 
 </head>
 <body style="@yield('styling') z-index: 10;">

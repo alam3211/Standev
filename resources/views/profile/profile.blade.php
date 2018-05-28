@@ -102,7 +102,7 @@
 										<td>{{ $profile->e_date }}</td>
 										<td>{{ $profile->s_length }} x {{ $profile->s_width }} m<sup>2</sup></td>
 										<td>{{ $profile->s_price }}</td>
-										<td>{{ $profile->created_at }}</td>
+										<td>{{ $profile->book_time }}</td>
 										<td>{{ $profile->book_status }}</td>
 									</tr>
 								</tbody>

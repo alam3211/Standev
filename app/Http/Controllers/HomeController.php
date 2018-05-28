@@ -49,7 +49,7 @@ class HomeController extends Controller
             $imgprofile = Tenant::where('user_id',$getid)->first()->t_product;
         }
     }
-    
+    //dd($profiles);
     return view('profile.profile',compact('profiles'))->with('imgprofile',$imgprofile);
     }
 }
