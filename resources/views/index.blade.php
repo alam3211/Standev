@@ -26,7 +26,7 @@ background-image : none;
 <div style="background:white;height: 450px;overflow: hidden;">
     <div class="container" style="margin: 3%">
     	<div class="row">
-    		<div class="col-sm-6 text-justify">
+    		<div class="col-md-6 col-sm-8 text-justify" style="padding: 1%;">
     			<h2>The BEST Solution!</h2>
     			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     			<button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">Register Now</button>
@@ -61,24 +61,24 @@ background-image : none;
                     <h2>Why Choose StandEv ?</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-3 mr-auto rounded cool-box" style="margin: 5px;background-color: white;">
+                    <div class="col-md-3 mr-auto rounded cool-box" style="background-color: white;">
                         <div class="service_item">
                             <i class="fa fa-user fa-fw"></i>
-                            <a href="#"><h3>Easy to use</h3></a>
+                            <h3>Easy to use</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
                         </div>
                     </div>
-                    <div class="col-md-3 mr-auto cool-box" style="margin: 5px;background-color: white;">
+                    <div class="col-md-3 mr-auto rounded cool-box" style="background-color: white;">
                         <div class="service_item">
                             <i class="fa fa-user fa-fw"></i>
-                            <a href="#"><h3>Make it Easy ! </h3></a>
+                            <h3>Make it Easy ! </h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
                         </div>
                     </div>
-                    <div class="col-md-3" style="margin: 5px;background-color: white;">
-                        <div class="service_item cool-box">
+                    <div class="col-md-3" style="background-color: white;">
+                        <div class="service_item rounded cool-box">
                             <i class="fa fa-user fa-fw"></i>
-                            <a href="#"><h3>Facilitate Users</h3></a>
+                            <h3>Facilitate Users</h3>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
                         </div>
                     </div>
@@ -87,7 +87,7 @@ background-image : none;
 
     </div>
 </div>
-<footer class="footer-social-icon text-center " id="footer" style="background-color: #993333; color: white; padding: 1%;">
+<footer class="footer-social-icon text-center" id="footer" style="background-color: #993333; color: white; padding: 1% 1% 1px 1%;">
         <div class="footer-text">
             <h2>StandEv</h2>
         </div>
@@ -109,7 +109,7 @@ background-image : none;
     </footer>
     <style type="text/css">
         #footer a {
-            color: #99ccff;
+            color: white;
         }
     </style>
        <script type="text/javascript">
