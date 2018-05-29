@@ -55,7 +55,7 @@ class BookingController extends Controller
                     ->where('event.e_id',$e_id)
                     ->where('booking.book_status','0')
                     ->paginate(5);
-                    ->get();
+  
         $count = count($booklists);
 
         return view('profile.book_list',compact('booklists'))->with('count',$count);

@@ -10,7 +10,7 @@ background-image : none;
         window.loading_screen = window.pleaseWait({
           logo: "images/logonya.png",
           backgroundColor: '#c0392b',
-          loadingHtml: "<div class='sk-spinner sk-spinner-wave'><div class='sk-rect1'></div><div class='sk-rect2'></div><div class='sk-rect3'></div><div class='sk-rect4'></div><div class='sk-rect5'></div></div>"
+          loadingHtml: "<div class='spinner'><div class='rect1'></div><div class='rect2'></div><div class='rect3'></div><div class='rect4'></div><div class='rect5'></div></div>"
         });
     </script>
 @endsection
@@ -72,7 +72,7 @@ background-image : none;
                         <div class="service_item">
                             <i class="fa fa-check-circle fa-fw"></i>
                             <a href="#"><h3>Easy to Use</h3></a>
-                            <p>very helpful for event organizers and tenants, very flexible, can be used anytime and anywhere.</p>
+                            <p class="text-justify">very helpful for event organizers and tenants, very flexible, can be used anytime and anywhere.</p>
 
                         </div>
                     </div>
@@ -80,14 +80,14 @@ background-image : none;
                         <div class="service_item">
                             <i class="fa fa-calendar fa-fw"></i>
                             <a href="#"><h3>Always UpToDate</h3></a>
-                            <p>StandEv will always provide the latest information and show you the latest event schedules, we will check every transaction every day.</p>
+                            <p class="text-justify">StandEv will always provide the latest information and show you the latest event schedules, we will check every transaction every day.</p>
                         </div>
                     </div>
-                    <div class="col-md-3" style="margin: 5px;background-color: white;">
-                        <div class="service_item cool-box">
+                    <div class="col-md-3 rounded cool-box" style="margin: 5px;background-color: white;">
+                        <div class="service_item">
                             <i class="fa fa-thumbs-up fa-fw"></i>
                             <a href="#"><h3>Trusted and Proven</h3></a>
-                            <p>Any information we display is based on valid data, each user which incorporated with StandEv will be validated.</p>
+                            <p class="text-justify">Any information we display is based on valid data, each user which incorporated with StandEv will be validated.</p>
                         </div>
                     </div>
                 </div>
