@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Tenant;
 use App\Booking;
 use App\Event;
+use App\Stand;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -33,6 +34,11 @@ class BookingController extends Controller
         $bookvalid = Booking::where('b_id',$request->bookid)->first();
         $bookvalid->book_status = $request->accept ?? $request->decline;
         $bookvalid->save();
+        if ($request->accept) {
+            $kuota = Stand::where('s_id',$bookvalid->s_id)->first();
+            $kuota->s_available -= 1;
+            $kuota->save();
+        }
         
         return redirect()->action('BookingController@getBook');
     }

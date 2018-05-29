@@ -8,6 +8,7 @@ class Stand extends Model
 {
     //
     protected $table = 'stand';
+    protected $primaryKey = 's_id';
     protected $fillable = [
             'e_id',
             's_length',
