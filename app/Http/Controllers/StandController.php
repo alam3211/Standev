@@ -17,4 +17,6 @@ class StandController extends Controller
 		
 		return view('elist',compact('standposts'));
 	}
+
+	
 }

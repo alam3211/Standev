@@ -62,7 +62,7 @@
                         <a class="nav-link" href="{{ route('post') }}">Posting</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('book_list') }}">Booking List</a>
+                        <a class="nav-link" href="{{ route('book_list') }}">Booking List <span class="badge badge-light">@yield('notif')</span></a>
                     </li>
                 @endif
                     <li class="nav-item dropdown">

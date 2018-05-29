@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Illuminate\Routing\Router;
 
 class ForgotPasswordController extends Controller
 {
@@ -29,4 +30,5 @@ class ForgotPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
 }

@@ -14,6 +14,8 @@
 Route::get('/', function () { return view('index'); })->name('index');
 Route::post('/','Auth\LoginController@login')->name('login');
 Route::post('/','Auth\LoginController@logout')->name('logout');
+Route::post('/','Auth\ResetPasswordController@reset')->name('reset');
+
 
 Route::get('/reset_password', function () { return view('auth.reset'); })->name('password.request');
 Auth::Routes();

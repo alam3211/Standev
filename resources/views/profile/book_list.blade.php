@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('notif')
+	<span class="badge badge-light">{{ $count }}</span>
+@endsection
+
 @section('content')
 <div class="container" style="margin-top: 10%;">
 	<table class="table table-hover">
