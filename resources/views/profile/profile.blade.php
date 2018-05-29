@@ -73,6 +73,7 @@
 						</div>
 					</div><hr>
 					@endforeach
+					{{ $profiles->links("pagination::bootstrap-4")}}
 				@else
 					<div class="row pull-right">
 						<a class="btn btn-primary btn-lg pull-right" href="{{ route('elist') }}" style="margin-left: -70px; padding: 7px 15px;">+</a>
@@ -110,6 +111,7 @@
 						</div>
 					</div><hr>
 					@endforeach
+					{{ $profiles->links("pagination::bootstrap-4")}}
 				@endif
 					
 				</div>

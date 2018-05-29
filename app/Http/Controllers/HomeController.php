@@ -37,7 +37,7 @@ class HomeController extends Controller
             $profiles = DB::table('stand')
                     ->join('event','stand.e_id','=','event.e_id')
                     ->where('user_id',$getid)
-                    ->get();
+                    ->paginate(5);
             $imgprofile = Event::where('user_id',$getid)->first()->e_poster;
         }else{ #tenant profile
             $profiles = DB::table('booking')
@@ -45,7 +45,7 @@ class HomeController extends Controller
                     ->join('stand','stand.s_id','=','booking.s_id')
                     ->join('event','event.e_id','=','stand.e_id')
                     ->where('tenant.user_id',$getid)
-                    ->get();
+                    ->paginate(5);
             $imgprofile = Tenant::where('user_id',$getid)->first()->t_product;
         }
     }
