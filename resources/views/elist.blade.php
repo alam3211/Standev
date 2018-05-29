@@ -28,7 +28,7 @@
 					<button class="btn btn-success">Price<br><b>{{ $post->s_price }}</b></button>
 					</span>
 					<span>
-					<button class="btn btn-dark" data-toggle="modal" data-target="#readmore{{ $post->s_id }}"><b>Read<br>More</b></button>
+					<button class="btn btn-basic" data-toggle="modal" data-target="#readmore{{ $post->s_id }}"><b>Read<br>More</b></button>
 					</span>
 					<div class="modal fade" id="readmore{{ $post->s_id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="color: black;">
 					  <div class="modal-dialog modal-dialog-centered" role="document">
@@ -68,7 +68,11 @@
 						@if(Auth::User()->role !== 1)
 						<form action="{{ route('booking_store') }}" method="post">
 							{{ csrf_field() }}
-						<button name="pesan" value="{{ $post->s_id }}" type="submit" class="btn btn-danger">BOOKING</button>
+						@if($post->s_available <= 0)
+							<button name="pesan" value="{{ $post->s_id }}" type="submit" class="btn btn-danger" disabled><b>SOLD OUT</b></button>
+						@else
+							<button name="pesan" value="{{ $post->s_id }}" type="submit" class="btn btn-danger">BOOKING</button>
+						@endif
 						</form>
 						@endif
 					@endif
