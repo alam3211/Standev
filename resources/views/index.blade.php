@@ -26,9 +26,16 @@ background-image : none;
 <div style="background:white;height: 450px;overflow: hidden;">
     <div class="container" style="margin: 3%">
     	<div class="row">
-    		<div class="col-md-6 col-sm-8 text-justify" style="padding: 1%;">
-    			<h2>The BEST Solution!</h2>
-    			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    		<div class="col-sm-6 text-justify">
+    			<h2>The BEST way to make it EASY!</h2>
+    			<p>Are you an Event Organizer? or are you a Tenant?
+                <br>Is it difficult to find sellers to fill booths during the event? or maybe difficult to find what events will be held?
+                <br><br>Now, StandEv has come to make it easier for you.
+                <br>This is the best way to connect the Event Organizers with the Tenants using the website platform.
+                <br>So, if you are one of them, do not wait anymore!!!
+                <br>Join us on StandEv.</p>
+
     			<button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">Register Now</button>
                 <!-- MODAL REGISTER -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -63,23 +70,24 @@ background-image : none;
                 <div class="row">
                     <div class="col-md-3 mr-auto rounded cool-box" style="background-color: white;">
                         <div class="service_item">
-                            <i class="fa fa-user fa-fw"></i>
-                            <h3>Easy to use</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
+                            <i class="fa fa-check-circle fa-fw"></i>
+                            <a href="#"><h3>Easy to Use</h3></a>
+                            <p>very helpful for event organizers and tenants, very flexible, can be used anytime and anywhere.</p>
+
                         </div>
                     </div>
                     <div class="col-md-3 mr-auto rounded cool-box" style="background-color: white;">
                         <div class="service_item">
-                            <i class="fa fa-user fa-fw"></i>
-                            <h3>Make it Easy ! </h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
+                            <i class="fa fa-calendar fa-fw"></i>
+                            <a href="#"><h3>Always UpToDate</h3></a>
+                            <p>StandEv will always provide the latest information and show you the latest event schedules, we will check every transaction every day.</p>
                         </div>
                     </div>
-                    <div class="col-md-3" style="background-color: white;">
-                        <div class="service_item rounded cool-box">
-                            <i class="fa fa-user fa-fw"></i>
-                            <h3>Facilitate Users</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
+                    <div class="col-md-3" style="margin: 5px;background-color: white;">
+                        <div class="service_item cool-box">
+                            <i class="fa fa-thumbs-up fa-fw"></i>
+                            <a href="#"><h3>Trusted and Proven</h3></a>
+                            <p>Any information we display is based on valid data, each user which incorporated with StandEv will be validated.</p>
                         </div>
                     </div>
                 </div>

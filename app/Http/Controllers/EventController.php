@@ -42,7 +42,8 @@ class EventController extends Controller
             's_fac_desc' => $request->s_desc,
             's_photo' => $path,
         ]);
-
+        
         return redirect()->action('StandController@getStand');
     }
+
 }

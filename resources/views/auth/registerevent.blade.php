@@ -12,7 +12,6 @@
                 @foreach($errors->all() as $error)
                 <li class="alert alert-danger">{{$error}}</li>
                     @endforeach
-        
             </ul>
         @endif
         
@@ -25,13 +24,13 @@
             <fieldset>
                 <h2 class="fs-title">Make an Account</h2>
                 <h3 class="fs-subtitle">Lets make your Account!</h3>
-                <input id="name" type="text" class="form-control" name="l_name" value="{{ old('l_name') }}" required placeholder="Username">
+                <input id="name" type="text" class="form-control" name="l_name" value="{{ old('l_name') }}" placeholder="Username">
                     @if ($errors->has('name'))
                         <span class="help-block">
                         <strong>{{ $errors->first('name') }}</strong>
                         </span>
                     @endif
-                <input id="password" type="password" class="form-control" name="l_password" required placeholder="password">
+                <input id="password" type="password" class="form-control" name="l_password" placeholder="password">
                     @if ($errors->has('password'))
                         <span class="help-block">
                         <strong>{{ $errors->first('password') }}</strong>
