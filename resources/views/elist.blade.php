@@ -75,6 +75,7 @@
 				</div>
 				</div>
 			@endforeach
+			 {{ $standposts->links("pagination::bootstrap-4")}}
 		</div>
 	</div>
 	</div>

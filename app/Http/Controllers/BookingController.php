@@ -54,7 +54,7 @@ class BookingController extends Controller
                     ->join('tenant','booking.t_id','=','tenant.t_id')
                     ->where('event.e_id',$e_id)
                     ->where('booking.book_status','0')
-                    ->get();
+                    ->paginate(5);
 
         return view('profile.book_list',compact('booklists'));
     }

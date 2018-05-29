@@ -50,6 +50,7 @@
 	  </div>
 	</div>
 	  @endforeach
+	  {{ $booklists->links("pagination::bootstrap-4")}}
 	</table>
 </div>
 @endsection

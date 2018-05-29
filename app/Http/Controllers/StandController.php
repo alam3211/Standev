@@ -13,7 +13,7 @@ class StandController extends Controller
 
 		$standposts = DB::table('stand')
 					->join('event','stand.e_id','=','event.e_id')
-					->get();
+					->paginate(4);
 		
 		return view('elist',compact('standposts'));
 	}
