@@ -26,6 +26,7 @@ background-image : none;
 <div style="background:white;height: 450px;overflow: hidden;">
     <div class="container" style="margin: 3%">
     	<div class="row">
+
     		<div class="col-sm-6 text-justify">
     			<h2>The BEST way to make it EASY!</h2>
     			<p>Are you an Event Organizer? or are you a Tenant?
@@ -34,6 +35,7 @@ background-image : none;
                 <br>This is the best way to connect the Event Organizers with the Tenants using the website platform.
                 <br>So, if you are one of them, do not wait anymore!!!
                 <br>Join us on StandEv.</p>
+
     			<button class="action-button" data-toggle="modal" data-target="#exampleModalCenter">Register Now</button>
                 <!-- MODAL REGISTER -->
                 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -66,14 +68,15 @@ background-image : none;
                     <h2>Why Choose StandEv ?</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-3 mr-auto rounded cool-box" style="margin: 5px;background-color: white;">
+                    <div class="col-md-3 mr-auto rounded cool-box" style="background-color: white;">
                         <div class="service_item">
                             <i class="fa fa-check-circle fa-fw"></i>
                             <a href="#"><h3>Easy to Use</h3></a>
                             <p>very helpful for event organizers and tenants, very flexible, can be used anytime and anywhere.</p>
+
                         </div>
                     </div>
-                    <div class="col-md-3 mr-auto cool-box" style="margin: 5px;background-color: white;">
+                    <div class="col-md-3 mr-auto rounded cool-box" style="background-color: white;">
                         <div class="service_item">
                             <i class="fa fa-calendar fa-fw"></i>
                             <a href="#"><h3>Always UpToDate</h3></a>
@@ -92,7 +95,7 @@ background-image : none;
 
     </div>
 </div>
-<footer class="footer-social-icon text-center " id="footer" style="background-color: #993333; color: white; padding: 1%;">
+<footer class="footer-social-icon text-center" id="footer" style="background-color: #993333; color: white; padding: 1% 1% 1px 1%;">
         <div class="footer-text">
             <h2>StandEv</h2>
         </div>
@@ -114,7 +117,7 @@ background-image : none;
     </footer>
     <style type="text/css">
         #footer a {
-            color: #99ccff;
+            color: white;
         }
     </style>
        <script type="text/javascript">

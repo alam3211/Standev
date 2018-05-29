@@ -97,7 +97,7 @@ Main Components
 .service_item i {
   height: 65px;
   width: 65px;
-  background: #f8395d;
+  background: #c0392b;
   border-radius: 5px;
   display: block;
   text-align: center;
@@ -105,7 +105,7 @@ Main Components
   color: #fff;
   margin: auto;
   font-size: 36px;
-  border: 1px solid #f8395d;
+  border: 1px solid #c0392b;
   -webkit-transition: all 400ms linear 0s;
   -o-transition: all 400ms linear 0s;
   transition: all 400ms linear 0s;
@@ -130,12 +130,9 @@ Main Components
 
 .service_item:hover i {
   background: transparent;
-  color: #f8395d;
+  color: #c0392b;
 }
 
-.service_item:hover h3 {
-  color: #f8395d;
-}
 
 .purple_service .service_item i {
   background: #a640d0;
