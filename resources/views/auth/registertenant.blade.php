@@ -6,13 +6,12 @@
     <div class="col-sm-6 col-md-offset-6 mx-auto" style="z-index: 1;">
         <form id="msform" method="POST" action="{{ route('regis_store_tenant') }}" enctype="multipart/form-data" style="margin-bottom: 40px;">
             {{ csrf_field() }}
-
+        <!-- error handling -->
         @if(count($errors)>0)
             <ul>
                 @foreach($errors->all() as $error)
                 <li class="alert alert-danger">{{$error}}</li>
-                    @endforeach
-        
+                @endforeach
             </ul>
         @endif
             <ul id="progressbar">

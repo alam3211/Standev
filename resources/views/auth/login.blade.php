@@ -5,6 +5,14 @@
     <div class="col-sm-6 col-md-offset-2 mx-auto" style="margin-top: 3%;">
         <form id="msform" method="POST" action="{{route('login')}}" style="margin-bottom: 40px;">
             {{ csrf_field() }}
+            <!-- error handling -->
+            @if(count($errors)>0)
+                <ul>
+                    @foreach($errors->all() as $error)
+                    <li class="alert alert-danger">{{$error}}</li>
+                    @endforeach
+                </ul>
+            @endif            
             <!-- fieldsets -->
             <fieldset>
                 <h2 class="fs-title">Login</h2>

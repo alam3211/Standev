@@ -70,12 +70,28 @@ Main Components
   /* we target browsers that don't support preserve-3d and show just a standard image - no effect visible */
   position: relative;
 }
+
+
 .our_service_area {
   padding: 100px 0px;
 }
 
+.main_title {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cool-box{
+  padding: 15px;
+}
+
 .service_item {
   text-align: center;
+}
+
+.colouring-box {
+  background-color: red;
 }
 
 .service_item i {

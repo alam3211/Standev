@@ -54,28 +54,29 @@ background-image : none;
     </div>
 </div>
 
-<div class="our_service_area" style="background-color: transparent;">
-    <div class="container" >
-        <div class="main_title">
-                    <h2 style="text-align: center;">Why Choose StandEv ?</h2>
+<div class="cd-background-wrapper">
+    <div class="parallax">
+            <div class="container mx-auto" style="padding: 100px 0px;">
+                <div class="main_title">
+                    <h2>Why Choose StandEv ?</h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3 mr-auto rounded cool-box" style="margin: 5px;background-color: white;">
                         <div class="service_item">
                             <i class="fa fa-user fa-fw"></i>
-                            <a href="#"><h3>Data In Cloud</h3></a>
+                            <a href="#"><h3>Easy to use</h3></a>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3 mr-auto cool-box" style="margin: 5px;background-color: white;">
                         <div class="service_item">
                             <i class="fa fa-user fa-fw"></i>
                             <a href="#"><h3>Make it Easy ! </h3></a>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="service_item">
+                    <div class="col-md-3" style="margin: 5px;background-color: white;">
+                        <div class="service_item cool-box">
                             <i class="fa fa-user fa-fw"></i>
                             <a href="#"><h3>Facilitate Users</h3></a>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since .</p>
@@ -83,9 +84,8 @@ background-image : none;
                     </div>
                 </div>
             </div>
-        </div>
-<div class="cd-background-wrapper">
-    <div class="parallax"></div>
+
+    </div>
 </div>
 <footer class="footer-social-icon text-center " id="footer" style="background-color: #993333; color: white; padding: 1%;">
         <div class="footer-text">
