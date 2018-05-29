@@ -20,7 +20,7 @@ class EventController extends Controller
             's_length' => 'required|numeric',
             's_price' => 'required|numeric',
             's_kuota' => 'required|integer',
-            's_desc' => 'string',
+            's_desc' => 'nullable|string',
             's_photo' => 'file|max:2000|mimes:jpeg,png',
             'lampu',
             'kursi',    
